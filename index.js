@@ -3,7 +3,7 @@
  */
 
 import fakhri from "./tasks/fakhri/index.js";
-import ali from "./tasks/ali/index.js"
+import ali from "./tasks/ali/index.js";
 
 console.log("===========================================");
 // Use IIFE here
@@ -113,7 +113,7 @@ console.log("===========================================");
   }
   // Failed
   try {
-    const countArray = naufal.countArray(['abc', 'a']);
+    const countArray = naufal.countArray(["abc", "a"]);
     console.log(countArray);
   } catch (error) {
     console.log(error.message);
@@ -127,38 +127,68 @@ console.log("===========================================");
  */
 
 (function taskAli() {
-  const data = [
-  { id: 1, name: "Ali Mustadji", hobbies: ["running", "gaming", "swimming", "programming", "soccer", "basketball",]},
-  { id: 2, name: "John Doe", hobbies: ["running", "programming", "sketting"] },
-  { id: 3, name: "John Takeuchi", hobbies: ["gaming", "fishing", "swimming"] },
-  { id: 4, name: "Sir Alex Ferguson ", hobbies: ["running", "basketball", "coaching"] },
-  { id: 5, name: "Cristiano Messi", hobbies: ["running", "soccer", "swimming"],
-  },
-];
+  const data = [1,2,3,4,5];
+  const data2 = "string";
+  const callbackFnFilter = (element,index,array) => {
+    if(element % 2 === 0){
+      return element;
+    }
+};  
+
+const callbackFnMap = (element,index,array) =>{
+  return element * 2;
+};
+//Success
   try {
-    const manualMap = ali.manualBuilInMap(data,"name","hobbies");
+    const manualMap = ali.manualBuilInMap(data,callbackFnMap);
     console.log(manualMap);
   } catch (error) {
     console.log(error.message);
   }
   try {
-    const manualFilter = ali.manualBuilInFilter(data,"soccer");
+    const manualFilter = ali.manualBuilInFilter(data,callbackFnFilter);
     console.log(manualFilter);
   } catch (error) {
     console.log(error.message);
   }
+  //EdgeCase / Failed
+    try {
+    const manualMap = ali.manualBuilInMap(data2,callbackFnMap);
+    console.log(manualMap);
+  } catch (error) {
+    console.log(error.message);
+  }
+  try {
+    const manualFilter = ali.manualBuilInFilter(data2,callbackFnFilter);
+    console.log(manualFilter);
+  } catch (error) {
+    console.log(error.message);
+  }
+  //success
   try {
     const printTable = ali.printTable(3);
-    const printTableEdgeCase = ali.printTable("abs");
     console.log(printTable);
     console.log(printTableEdgeCase);
   } catch (error) {
     console.log(error.message);
   }
+  // edgecase / failed
+   try {
+    const printTableEdgeCase = ali.printTable("abs");
+    console.log(printTableEdgeCase);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // success
   try {
     const count = ali.countArray([1,2,3,4,5]);
-    const countEdgeCase = ali.countArray([1,2,3,4,5,"abc"]);
     console.log(count);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // edgecase / failed
+    try {
+    const countEdgeCase = ali.countArray([1,2,3,4,5,"abc"]);
     console.log(countEdgeCase);
   } catch (error) {
     console.log(error.message);

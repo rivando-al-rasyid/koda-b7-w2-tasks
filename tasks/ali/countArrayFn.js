@@ -7,5 +7,5 @@ export const countArray = (data) => {
             result *= data[i] ;
         }
     }
-    return result
-}
+    return result;
+};
