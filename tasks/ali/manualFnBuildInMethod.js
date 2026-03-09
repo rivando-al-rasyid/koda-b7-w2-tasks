@@ -8,8 +8,8 @@ export const manualBuildInFilter = (data, callbackFn) => {
   let result = [];
   for (let i = 0; i < data.length; i++) {
     const value = callbackFn(data[i]);
-    if(typeof value !== "number" || typeof value !== "string") continue;
-    result = [...result,value];
+    if(!value) continue;
+    result = [...result,data[i]];
   }
   return result;
 };
