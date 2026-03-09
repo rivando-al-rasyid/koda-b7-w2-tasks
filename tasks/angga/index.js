@@ -1,3 +1,9 @@
 import * as manual from "./manual.js";
+import { cetakTabel } from "./print-table.js";
 
-export default manual;
+const fc = {
+  ...manual,
+  cetakTabel,
+};
+
+export default fc;

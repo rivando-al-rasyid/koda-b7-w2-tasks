@@ -130,4 +130,28 @@ console.log("===========================================");
   } catch (err) {
     console.log(err.message);
   }
+
+  // Success Task 2
+  try {
+    const task2 = angga.cetakTabel(3);
+    console.table(task2);
+  } catch (err) {
+    console.log(err.message);
+  }
+
+  // Failed Task 2
+  try {
+    const task2 = angga.cetakTabel("abc");
+    console.table(task2);
+  } catch (err) {
+    console.log(err.message);
+  }
+
+  // Failed Task 2
+  try {
+    const task2 = angga.cetakTabel(-1);
+    console.table(task2);
+  } catch (err) {
+    console.log(err.message);
+  }
 })();
