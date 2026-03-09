@@ -51,22 +51,22 @@ console.log("===========================================");
   },
 ];
   try {
-    const manualMap = ali.manualBuilInMap(data,...information);
-    console.log(manualMap(data,"name","hobbies"));
+    const manualMap = ali.manualBuilInMap(data,"name","hobbies");
+    console.log(manualMap);
   } catch (error) {
     console.log(error.message);
   }
   try {
-    const manualFilter = ali.manualBuilInFilter(data,search);
-    console.log(fahrenheit);
+    const manualFilter = ali.manualBuilInFilter(data,"soccer");
+    console.log(manualFilter);
   } catch (error) {
     console.log(error.message);
   }
-  // Counting Changes Nominal
-  // Success
   try {
-    const changes = fakhri.cashier(250_000, 375_000);
-    console.log(changes);
+    const printTable = ali.printTable(3);
+    const printTableEdgeCase = ali.printTable("abs");
+    console.log(printTable);
+    console.log(printTableEdgeCase);
   } catch (error) {
     console.log(error.message);
   }
