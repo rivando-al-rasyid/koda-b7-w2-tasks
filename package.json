@@ -1,5 +1,5 @@
 {
-  "name": "koda5-weekly2",
+  "name": "koda-b7-tasks",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -10,13 +10,13 @@
   },
   "keywords": [
     "koda",
-    "b5",
+    "b7",
     "week 2",
-    "weekly"
+    "forking"
   ],
   "author": "kodacampmain",
   "license": "ISC",
-  "description": "Week 2 - Weekly Task",
+  "description": "Week 2 - Forking Task",
   "devDependencies": {
     "@stylistic/eslint-plugin": "^5.5.0",
     "eslint": "^9.39.1",
