@@ -10,7 +10,7 @@ error terjadi di :
 2. file server.js pada function handleRequest di baris ke 20 dan di karakter ke 5
 3. file app.js pada function main di baris ke 35 dan di karakter ke 2
 
-c. Eror terjadi karena adanya kesalahan syntax kurung tutup ')'
+c. Error terjadi karena adanya kesalahan syntax kurung tutup ')'
 yang terjadi pada file script.js baris ke 5
 
 d. Error terjadi karena kesalahan dalam setting status ke dalam objek atau variabel yang sebenarnya tidak ada
