@@ -469,3 +469,85 @@ console.log("===========================================");
   
 })();
 console.log("===========================================");
+
+
+/**
+ * Task Hanif
+ */
+
+import hanif from "./tasks/hanif/index.js";
+
+console.log("===========================================");
+// Use IIFE here
+
+(function taskHanif() {
+
+  // manual Map function
+   try {
+    const arr = [1,2,3,4,5];
+    const timesByTen = hanif.manualMap(arr, (n) => n * 10);
+    console.log(timesByTen);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // Failed
+  try {
+    const arr = 5;
+    const timesByTen = hanif.manualMap(arr, (n) => n * 10);
+    console.log(timesByTen);
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  // manual Filter function
+   try {
+    const arr = [1,2,3,4,5,6];
+    const evenNumbers = hanif.manualFilter(arr, (n) => n % 2 === 0);
+    console.log(evenNumbers);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // Failed
+  try {
+    const arr = 5;
+    const evenNumbers = hanif.manualFilter(arr, (n) => n * 2);
+    console.log(evenNumbers);
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  // cetakTabel
+  // Success
+  try {
+    const cetakTabel = hanif.cetakTabel(5);
+    cetakTabel;
+  } catch (error) {
+    console.log(error.message);
+  }
+  // Failed
+  try {
+    const cetakTabel = hanif.cetakTabel("abc");
+    cetakTabel;
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  // countArray
+  // Success
+  try {
+    const arr = [1,2,3,4,5];
+    const countArray = hanif.countArray(arr);
+    console.log(countArray);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // Failed
+  try {
+    const countArray = hanif.countArray(["abc", "a"]);
+    console.log(countArray);
+  } catch (error) {
+    console.log(error.message);
+  }
+  
+})();
+console.log("===========================================");
