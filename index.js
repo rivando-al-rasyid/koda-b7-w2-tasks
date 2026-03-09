@@ -470,66 +470,161 @@ console.log("===========================================");
 })();
 console.log("===========================================");
 
-  import akmal from "./tasks/akmal/index.js";
-  console.log("===========================================");
+/**
+ * Task Hanif
+ */
 
-  (function akmalTask() {
+import hanif from "./tasks/hanif/index.js";
+
+console.log("===========================================");
+// Use IIFE here
+
+(function taskHanif() {
+
+  // manual Map function
+   try {
+    const arr = [1,2,3,4,5];
+    const timesByTen = hanif.manualMap(arr, (n) => n * 10);
+    console.log(timesByTen);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // Failed
   try {
-    const belanja = [24000, 11000, 30000];
-    const map = akmal.mapManual(belanja);
-    console.log(map);
+    const arr = 5;
+    const timesByTen = hanif.manualMap(arr, (n) => n * 10);
+    console.log(timesByTen);
   } catch (error) {
     console.log(error.message);
   }
-    try {
-    const belanja = [24000, 11000,"saka"];
-    const map = akmal.mapManual(belanja);
-    console.log(map);
+
+  // manual Filter function
+   try {
+    const arr = [1,2,3,4,5,6];
+    const evenNumbers = hanif.manualFilter(arr, (n) => n % 2 === 0);
+    console.log(evenNumbers);
   } catch (error) {
     console.log(error.message);
   }
+  // Failed
   try {
-    const nilai = [
-  { nama: "Rendi", skor: 85 },
-  { nama: "Budi", skor: 50 },
-  { nama: "Cici", skor: 60 },
-  { nama: "Rudi", skor: 55 },
-  { nama: "Tasya", skor: 90 },
-  { nama: "lusi", skor: 92 }
-  ];
-    akmal.filterManual(nilai);
+    const arr = 5;
+    const evenNumbers = hanif.manualFilter(arr, (n) => n * 2);
+    console.log(evenNumbers);
   } catch (error) {
     console.log(error.message);
   }
-    try {
-    const nilai =("abc");
-    akmal.filterManual(nilai);
-  } catch (error) {
-    console.log(error.message);
-  }
+
+  // cetakTabel
+  // Success
   try {
-    const countArray = akmal.countArray([1,2,3,4,5]);
+    const cetakTabel = hanif.cetakTabel(5);
+    cetakTabel;
+  } catch (error) {
+    console.log(error.message);
+  }
+  // Failed
+  try {
+    const cetakTabel = hanif.cetakTabel("abc");
+    cetakTabel;
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  // countArray
+  // Success
+  try {
+    const arr = [1,2,3,4,5];
+    const countArray = hanif.countArray(arr);
     console.log(countArray);
   } catch (error) {
     console.log(error.message);
   }
-    try {
-    const countArray = akmal.countArray("sda");
-    console.log(countArray);
-  } catch (error) {
-    console.log(error.message);
-  }
+  // Failed
   try {
-    const perkalian = akmal.cetakTabel(5);
-    console.log(perkalian);
-  } catch (error) {
-    console.log(error.message);
-  }
-    try {
-    const perkalian = akmal.cetakTabel("asdj");
-    console.log(perkalian);
+    const countArray = hanif.countArray(["abc", "a"]);
+    console.log(countArray);
   } catch (error) {
     console.log(error.message);
   }
   
 })();
+console.log("===========================================");
+
+/**
+ * Task Ali
+ */
+import ali from "./tasks/ali/index.js";
+
+console.log("===========================================");
+
+(function taskAli() {
+  const data = [1,2,3,4,5];
+  const data2 = "string";
+  const callbackFnFilter = (element,index,array) => {
+    if(element % 2 === 0){
+      return element;
+    }
+};  
+
+  const callbackFnMap = (element,index,array) =>{
+    return element * 2;
+  };
+//Success
+  try {
+    const manualMap = ali.manualBuilInMap(data,callbackFnMap);
+    console.log(manualMap);
+  } catch (error) {
+    console.log(error.message);
+  }
+  try {
+    const manualFilter = ali.manualBuilInFilter(data,callbackFnFilter);
+    console.log(manualFilter);
+  } catch (error) {
+    console.log(error.message);
+  }
+  //EdgeCase / Failed
+    try {
+    const manualMap = ali.manualBuilInMap(data2,callbackFnMap);
+    console.log(manualMap);
+  } catch (error) {
+    console.log(error.message);
+  }
+  try {
+    const manualFilter = ali.manualBuilInFilter(data2,callbackFnFilter);
+    console.log(manualFilter);
+  } catch (error) {
+    console.log(error.message);
+  }
+  //success
+  try {
+    const printTable = ali.printTable(3);
+    console.log(printTable);
+    console.log(printTableEdgeCase);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // edgecase / failed
+   try {
+    const printTableEdgeCase = ali.printTable("abs");
+    console.log(printTableEdgeCase);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // success
+  try {
+    const count = ali.countArray([1,2,3,4,5]);
+    console.log(count);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // edgecase / failed
+    try {
+    const countEdgeCase = ali.countArray([1,2,3,4,5,"abc"]);
+    console.log(countEdgeCase);
+  } catch (error) {
+    console.log(error.message);
+  }
+})();
+
+console.log("===========================================");
