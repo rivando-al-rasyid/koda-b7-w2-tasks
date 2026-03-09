@@ -67,7 +67,7 @@ console.log("===========================================");
   }
   // Failed
   try {
-    const hitungArray = vando.countArray(["1", "2" , "5"]);
+    const hitungArray = vando.countArray(["a", "2" , "5"]);
     console.log(hitungArray);
   } catch (error) {
     console.log(error.message);

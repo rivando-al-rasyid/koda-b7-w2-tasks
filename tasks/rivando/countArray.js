@@ -1,4 +1,8 @@
 export function countArray(arr){
-  let hasil = arr.map(number => number * number)
+
+  let hasil = 1
+  arr.forEach(angka => {
+    hasil = hasil * angka;
+  });
   return hasil;
 }
