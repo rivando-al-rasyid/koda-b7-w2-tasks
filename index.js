@@ -130,8 +130,10 @@ import rafi from "./tasks/rafi/index.js";
 console.log("===========================================");
 (function taskRafi() {
 
-  console.log("-----Manual Map------");
+  
   //manual map
+  // Success
+  console.log("-----Manual Map Program------");
   try {
     const arr =  [1,2,3,4,5];
     const timesByTwo = rafi.manualMap(arr, (n) => n * 2);
@@ -140,9 +142,7 @@ console.log("===========================================");
     console.error(error.message);
   }
 
-  console.log("-----Manual Map GAGAL------");
-  // manual map
-  // gagal
+  // Failed
   try {
     const arr = 5;
     const timesByTwo = rafi.manualMap(arr, (n) => n * 2);
@@ -151,8 +151,9 @@ console.log("===========================================");
     console.error(error.message);
   }
 
-  console.log("-------Manual Filter-------");
+  console.log("-----Manual Filter Program------");
   //manual filter
+  // Success
   try {
     const arr = [1,2,3,4,5];
     const takeGenap = rafi.manualFilter(arr, (n) => n % 2 === 0);
@@ -161,9 +162,7 @@ console.log("===========================================");
     console.error(error.message);
   }
 
-  console.log("-------Manual Filter GAGAL--------");
-  //manual filter
-  //gagal
+  // Failed
   try {
     const arr = "Bukan array";
     const takeGenap = rafi.manualFilter(arr, (n) => n % 2 === 0);
@@ -172,26 +171,26 @@ console.log("===========================================");
     console.error(error.message);
   }
 
-  console.log("-------Count Tabel--------");
+  console.log("-----Manual Cetak Table Program------");
   //cetak table
+  // Success
   try {
     rafi.cetakTable(3);
   } catch(error){
     console.error(error.message);
   }
 
-  console.log("-------Count Tabel GAGAL---------");
-  //cetak table
-  //gagal
+  // cetak table
+  // Failed
   try {
     rafi.cetakTable("abc");
   } catch(error){
     console.error(error.message);
   }
 
-
-  console.log("--------Count Array-----------");
+  console.log("-----Count Array Program------");
   // Count Array
+  // Success
   try {
     const hasilCount = rafi.countArray([1,2,3,4,5]);
     console.log(hasilCount);
@@ -199,9 +198,7 @@ console.log("===========================================");
     console.error(error.message);
   }
 
-  console.log("-------Count Array GAGAL-----------");
-  //count array
-  //gagal
+  // Failed
   try {
     const hasilCount = rafi.countArray(123);
     console.log(hasilCount);
