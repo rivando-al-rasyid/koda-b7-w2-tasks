@@ -2,10 +2,10 @@
 // const price = 250_000;
 // const money = 275_000;
 
-const cardinaNumber = [1,2,3,4,5,6,7,8,9,10]
+const cardinaNumber = [1,2,3,4,5,6,7,8,9,10];
 
 
-export cetakTabel (num){
+export function cetakTabel (num){
   if (typeof num === "number" && num > 0 ){
     cardinaNumber.forEach(number => console.log(`${num} x ${number} = ${number * num} `))
   }else{
