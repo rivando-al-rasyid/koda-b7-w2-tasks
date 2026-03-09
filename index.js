@@ -469,3 +469,67 @@ console.log("===========================================");
   
 })();
 console.log("===========================================");
+
+  import akmal from "./tasks/akmal/index.js";
+  console.log("===========================================");
+
+  (function akmalTask() {
+  try {
+    const belanja = [24000, 11000, 30000]
+    const map = akmal.mapManual(belanja);
+    console.log(map);
+  } catch (error) {
+    console.log(error.message);
+  }
+    try {
+    const belanja = [24000, 11000,"saka"]
+    const map = akmal.mapManual(belanja);
+    console.log(map);
+  } catch (error) {
+    console.log(error.message);
+  }
+  try {
+    const nilai = [
+  { nama: 'Rendi', skor: 85 },
+  { nama: 'Budi', skor: 50 },
+  { nama: 'Cici', skor: 60 },
+  { nama: 'Rudi', skor: 55 },
+  { nama: 'Tasya', skor: 90 },
+  { nama: 'lusi', skor: 92 }
+  ];
+    akmal.filterManual(nilai);
+  } catch (error) {
+    console.log(error.message);
+  }
+    try {
+    const nilai =("abc");
+    akmal.filterManual(nilai);
+  } catch (error) {
+    console.log(error.message);
+  }
+  try {
+    const countArray = akmal.countArray([1,2,3,4,5]);
+    console.log(countArray);
+  } catch (error) {
+    console.log(error.message);
+  }
+    try {
+    const countArray = akmal.countArray("sda");
+    console.log(countArray);
+  } catch (error) {
+    console.log(error.message);
+  }
+  try {
+    const perkalian = akmal.cetakTabel(5);
+    console.log(perkalian);
+  } catch (error) {
+    console.log(error.message);
+  }
+    try {
+    const perkalian = akmal.cetakTabel("asdj");
+    console.log(perkalian);
+  } catch (error) {
+    console.log(error.message);
+  }
+  
+})();
