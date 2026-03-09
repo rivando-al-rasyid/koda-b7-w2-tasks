@@ -120,92 +120,6 @@ console.log("===========================================");
   
 })();
 console.log("===========================================");
-/**
- * Task Rafi
- */
-
-import rafi from "./tasks/rafi/index.js";
-
-console.log("===========================================");
-(function taskRafi() {
-
-  
-  //manual map
-  // Success
-  console.log("-----Manual Map Program------");
-  try {
-    const arr =  [1,2,3,4,5];
-    const timesByTwo = rafi.manualMap(arr, (n) => n * 2);
-    console.log(timesByTwo);
-  }catch(error) {
-    console.error(error.message);
-  }
-
-  // Failed
-  try {
-    const arr = 5;
-    const timesByTwo = rafi.manualMap(arr, (n) => n * 2);
-    console.log(timesByTwo);
-  } catch(error){
-    console.error(error.message);
-  }
-
-  console.log("-----Manual Filter Program------");
-  //manual filter
-  // Success
-  try {
-    const arr = [1,2,3,4,5];
-    const takeGenap = rafi.manualFilter(arr, (n) => n % 2 === 0);
-    console.log(takeGenap);
-  } catch(error) {
-    console.error(error.message);
-  }
-
-  // Failed
-  try {
-    const arr = "Bukan array";
-    const takeGenap = rafi.manualFilter(arr, (n) => n % 2 === 0);
-    console.log(takeGenap);
-  } catch(error){
-    console.error(error.message);
-  }
-
-  console.log("-----Manual Cetak Table Program------");
-  //cetak table
-  // Success
-  try {
-    rafi.cetakTable(3);
-  } catch(error){
-    console.error(error.message);
-  }
-
-  // cetak table
-  // Failed
-  try {
-    rafi.cetakTable("abc");
-  } catch(error){
-    console.error(error.message);
-  }
-
-  console.log("-----Count Array Program------");
-  // Count Array
-  // Success
-  try {
-    const hasilCount = rafi.countArray([1,2,3,4,5]);
-    console.log(hasilCount);
-  } catch(error) {
-    console.error(error.message);
-  }
-
-  // Failed
-  try {
-    const hasilCount = rafi.countArray(123);
-    console.log(hasilCount);
-  } catch(error){
-    console.error(error.message);
-  }
-})();
-console.log("===========================================");
 
 /**
  * Task Dwiki
@@ -376,6 +290,93 @@ console.log("===========================================");
     console.log(task3);
   } catch (err) {
     console.log(err.message);
+  }
+})();
+console.log("===========================================");
+
+/**
+ * Task Rafi
+ */
+
+import rafi from "./tasks/rafi/index.js";
+
+console.log("===========================================");
+(function taskRafi() {
+
+  
+  //manual map
+  // Success
+  console.log("-----Manual Map Program------");
+  try {
+    const arr =  [1,2,3,4,5];
+    const timesByTwo = rafi.manualMap(arr, (n) => n * 2);
+    console.log(timesByTwo);
+  }catch(error) {
+    console.error(error.message);
+  }
+
+  // Failed
+  try {
+    const arr = 5;
+    const timesByTwo = rafi.manualMap(arr, (n) => n * 2);
+    console.log(timesByTwo);
+  } catch(error){
+    console.error(error.message);
+  }
+
+  console.log("-----Manual Filter Program------");
+  //manual filter
+  // Success
+  try {
+    const arr = [1,2,3,4,5];
+    const takeGenap = rafi.manualFilter(arr, (n) => n % 2 === 0);
+    console.log(takeGenap);
+  } catch(error) {
+    console.error(error.message);
+  }
+
+  // Failed
+  try {
+    const arr = "Bukan array";
+    const takeGenap = rafi.manualFilter(arr, (n) => n % 2 === 0);
+    console.log(takeGenap);
+  } catch(error){
+    console.error(error.message);
+  }
+
+  console.log("-----Manual Cetak Table Program------");
+  //cetak table
+  // Success
+  try {
+    rafi.cetakTable(3);
+  } catch(error){
+    console.error(error.message);
+  }
+
+  // cetak table
+  // Failed
+  try {
+    rafi.cetakTable("abc");
+  } catch(error){
+    console.error(error.message);
+  }
+
+  console.log("-----Count Array Program------");
+  // Count Array
+  // Success
+  try {
+    const hasilCount = rafi.countArray([1,2,3,4,5]);
+    console.log(hasilCount);
+  } catch(error) {
+    console.error(error.message);
+  }
+
+  // Failed
+  try {
+    const hasilCount = rafi.countArray(123);
+    console.log(hasilCount);
+  } catch(error){
+    console.error(error.message);
   }
 })();
 console.log("===========================================");
