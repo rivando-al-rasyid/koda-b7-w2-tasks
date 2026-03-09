@@ -120,6 +120,7 @@ console.log("===========================================");
   
 })();
 console.log("===========================================");
+
 /**
  * Task Dwiki
  */
@@ -294,90 +295,88 @@ console.log("===========================================");
 console.log("===========================================");
 
 /**
- * Task Aqil
+ * Task Rafi
  */
 
-import aqil from "./tasks/aqil/index.js";
+import rafi from "./tasks/rafi/index.js";
 
 console.log("===========================================");
-// Use IIFE here
+(function taskRafi() {
 
-(function taskAqil() {
-
-  // manual Map function
-  try {
-    const angka = [5, 10, 15];
-    const hasilMap = aqil.manualMap(angka, function (item) {
-        return item + 1;
-    });
-    console.log("Hasil Map:", hasilMap);
-  } catch (error) {
-    console.log("Error pada manualMap:", error.message);
-  }
-  // Failed
-  try {
-    const data = 2;
-    const hasil = aqil.manualMap(data, function (item) {
-        return item + 1;
-    });
-    console.log("Hasil Map:", hasil);
-} catch (error) {
-    console.log("ManualMap Failed:", error.message);
-}
-  // manual Filter function
-  // success
-  try {
-    const angka = [5, 10, 15, 20];
-    const hasilFilter = aqil.manualFilter(angka, function (item) {
-        return item > 10;
-    });
-    console.log("Hasil Filter:", hasilFilter);
-  } catch (error) {
-    console.log("Error pada manualFilter:", error.message);
-  }
-  // Failed
-  try {
-  const angka = 3;
-  const hasilFilter = aqil.manualFilter(angka, function (item) {
-    return item > 10;
-  });
-  console.log("Hasil Filter:", hasilFilter);
-  } catch (error) {
-  console.log("ManualFilter Failed:", error.message);
-  }
-
-  // cetakTabel
+  
+  //manual map
   // Success
+  console.log("-----Manual Map Program------");
   try {
-  const angka = 5;
-  aqil.cetakTabel(angka);
-  } catch (error) {
-  console.log("Multiplication Table Failed:", error.message);
-  }
-  // Failed
-  try {
-    const cetakTabel = aqil.cetakTabel("abc");
-    console.log(cetakTabel);
-  } catch (error) {
-    console.log(error.message);
+    const arr =  [1,2,3,4,5];
+    const timesByTwo = rafi.manualMap(arr, (n) => n * 2);
+    console.log(timesByTwo);
+  }catch(error) {
+    console.error(error.message);
   }
 
-  // countArray
+  // Failed
+  try {
+    const arr = 5;
+    const timesByTwo = rafi.manualMap(arr, (n) => n * 2);
+    console.log(timesByTwo);
+  } catch(error){
+    console.error(error.message);
+  }
+
+  console.log("-----Manual Filter Program------");
+  //manual filter
   // Success
   try {
     const arr = [1,2,3,4,5];
-    const countArray = aqil.countArray(arr);
-    console.log(countArray);
-  } catch (error) {
-    console.log(error.message);
+    const takeGenap = rafi.manualFilter(arr, (n) => n % 2 === 0);
+    console.log(takeGenap);
+  } catch(error) {
+    console.error(error.message);
   }
+
   // Failed
   try {
-    const countArray = aqil.countArray(["abc", "a"]);
-    console.log(countArray);
-  } catch (error) {
-    console.log(error.message);
+    const arr = "Bukan array";
+    const takeGenap = rafi.manualFilter(arr, (n) => n % 2 === 0);
+    console.log(takeGenap);
+  } catch(error){
+    console.error(error.message);
   }
-  
+
+  console.log("-----Manual Cetak Table Program------");
+  //cetak table
+  // Success
+  try {
+    rafi.cetakTable(3);
+  } catch(error){
+    console.error(error.message);
+  }
+
+  // cetak table
+  // Failed
+  try {
+    rafi.cetakTable("abc");
+  } catch(error){
+    console.error(error.message);
+  }
+
+  console.log("-----Count Array Program------");
+  // Count Array
+  // Success
+  try {
+    const hasilCount = rafi.countArray([1,2,3,4,5]);
+    console.log(hasilCount);
+  } catch(error) {
+    console.error(error.message);
+  }
+
+  // Failed
+  try {
+    const hasilCount = rafi.countArray(123);
+    console.log(hasilCount);
+  } catch(error){
+    console.error(error.message);
+  }
 })();
 console.log("===========================================");
