@@ -1,0 +1,26 @@
+4 a. Pada soal dilihat bahwa terjadi error pada program penyebanya adalah mencoba mengakses 
+variabel bernama "user" tetapi nama tersebut belum dideklarasikan atau tidak ditemukan, Error terjadi pada:
+-app.js, fungsi getUserData dan baris ke-15
+-app.js, fungsi processUser dan baris ke 30
+-app.js, fungsi main dan baris ke-50
+
+b. pada soal ini error muncul karena perintah untuk mengecek jumlah data (.length) dari 
+sebuah variabel yang nilainya null(tidak ada). Error terjadi pada:
+-data.js, fungsi processData dan baris ke- 8
+-server.js, fungsi handleRequest dan baris ke-20
+-app.js, fungsi main dan baris ke-35
+
+c. pada bagian ini error muncul karena ada  tanda kurung tutup ')' di tempat 
+yang tidak seharusnya bisa jadi kurang atau berlebih penggunaannya maupun salah tempat. 
+Error terjadi pada file script.js pada baris ke-5
+
+d.pada bagian ini error terjadi karena penolakan program dalam menetapkan nilai 
+pada properti "status" dari sebuah objek yang nilainya "undefined". Error terjadi pada:
+-File order.js, fungsi updateOrder dan  baris ke-18
+-order.js, fungsi processOrder dan baris ke-35
+-cart.js, fungsi checkout, dan baris ke-50
+
+e. pada bagian ini terjadi error karena terjadinya tumpukan panggilan(callstack) 
+yang disebabkan karena fungsi dipanggil berulang kali tanpa henti(rekursi tanpa batas) 
+sehingga program kehabisan memori untuk melacak urutan pemanggilan tersebut. 
+Error terjadi di file app.js, pada fungsi recursiveFunction dan baris ke-10
