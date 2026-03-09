@@ -1,0 +1,37 @@
+A. 
+-pada fungsi getUserData file app.js, baris ke-15 kolom ke-10
+-pada fungsi processUser file app.js, baris ke-30 kolom ke-5
+-pada fungsi main file app.js, baris ke-50 kolom ke-2
+
+saya berasumsi variable dari user tidak pernah di definisikan sebelumnya di dalam fungsi tersebut
+
+
+B.
+-pada fungsi processData file data.js, baris ke-8 kolom ke-15
+-pada fungsi handleRequest file server.js, baris ke-20 kolom ke-5
+-pada fungsi main file app.js, baris ke-50 kolom ke-2
+
+asumsi saya ada variable dengan tipe data Object . kemudian di akses oleh fungsi fungsi tersebut tetapi ketika di akses data tersebut null atau undefined misal  data.address.country.codeCountry
+sedangkan pada contoh di atas merupakan asumsi object.key.length.key
+const data {
+    nama: string
+    hobbies : string[]
+    address : {
+        ZIP: string
+        city: string
+    }
+}
+
+C. pada  file script.js, baris ke-5
+terjadi ketika parser tidak melihat token yang dikenalnya pada posisi tertentu, sehingga tidak dapat memahami struktur program. Ini mungkin hanya kesalahan pengetikan sederhana.
+
+D.
+-pada fungsi updateOrder file order.js, baris ke-18 kolom ke-12
+-pada fungsi processOrder file order.js, baris ke-35 kolom ke-5
+-pada fungsi checkout file cart.js, baris ke-50 kolom ke-2
+terjadi ketika property tersebut tidak pernah ada di dalam object tersebut atau tidak pernah di definisikan
+
+
+E.  
+-pada fungsi recursivefunction file app.js, baris ke-10 kolom ke-3
+terjadi Infinite Loop di pada fungsi recursiveFunction
