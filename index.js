@@ -562,7 +562,7 @@ console.log("===========================================");
     if(element % 2 === 0){
       return element;
     }
-};
+};  
 
   const callbackFnMap = (element,index,array) =>{
     return element * 2;
@@ -701,6 +701,10 @@ console.log("===========================================");
   }
 })();
 console.log("===========================================");
+
+/**
+ * Task Vando
+ */
 
 import vando from "./tasks/rivando/index.js";
 console.log("===========================================");
