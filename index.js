@@ -3,7 +3,6 @@
  */
 
 import fakhri from "./tasks/fakhri/index.js";
-import vando from "./tasks/rivando/index.js";
 
 console.log("===========================================");
 // Use IIFE here
@@ -121,10 +120,29 @@ console.log("===========================================");
 
 })();
 console.log("===========================================");
-// Use IIFE here
+
+/**
+ * Task Vando
+ */
+
+import vando from "./tasks/rivando/index.js";
+
 (function taskVando() {
-  // Convert Celcius to Fahrenheit
-  // Success
+try {
+  const user = ["budi", "siti", "agus"];
+  const userKapital = custMap(user, (nama) => nama.toUpperCase());
+  console.log("Hasil Map (Kapital):", userKapital);
+} catch (error) {
+  console.log(error.message);
+}
+try {
+  const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Contoh: Mengambil angka yang genap saja
+  const angkaGenap = custFilter(angka, (item) => item % 2 === 0);
+  console.log("Hasil Filter (Genap):", angkaGenap);
+  } catch (error) {
+  console.log(error.message);
+  }
   try {
     const tabelPerkalian = vando.cetakTabel(10);
     console.log(tabelPerkalian);
