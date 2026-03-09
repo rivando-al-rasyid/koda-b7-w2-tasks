@@ -6,21 +6,26 @@ const produk = [
 ];
 
 function custArr(arr, callback) {
+  // memeriksa arr adalah sebuah array apabila bukan array dia di jalankan
   if (!Array.isArray(arr)) {
     throw new TypeError("Argumen pertama harus berupa Array.");
   }
+  // memeriksa callback adalah sebuah callback apabila bukan callback dia di jalankan
   if (typeof callback !== "function") {
     throw new TypeError("Argumen kedua harus berupa Fungsi (callback).");
   }
-
+  // sebagai template array sesuai recomendasi dari dokumentasi dari javascript
   let hasil = [];
+  // perulangan untuk mendapatkan value dari array
   for (let i = 0; i < arr.length; i++) {
+      //error handling untuk menambahkan isi array
       try {
+        //memeriksa apakah memenuhi callback/keadaan index value true apabila tidak akan di skip ke index selanjutnya
         if (callback(arr[i])) {
-      hasil = [...hasil, arr[i]];
-    }
-
-  } catch (error) {
+            hasil = [...hasil, arr[i]];
+        }
+  } //menangkap error yang ada
+  catch (error) {
       console.error(`Error pada indeks ke-${i}:`, error);
   }
 
@@ -29,19 +34,26 @@ function custArr(arr, callback) {
 }
 
 function custMap(arr, callback) {
-    if (!Array.isArray(arr)) {
+  // memeriksa arr adalah sebuah array apabila bukan array dia di jalankan
+  if (!Array.isArray(arr)) {
     throw new TypeError("Argumen pertama harus berupa Array.");
   }
-    if (typeof callback !== "function") {
+  // memeriksa callback adalah sebuah callback apabila bukan callback dia di jalankan
+  if (typeof callback !== "function") {
     throw new TypeError("Argumen kedua harus berupa Fungsi (callback).");
   }
+  // sebagai template array sesuai recomendasi dari dokumentasi dari javascript
   let hasil = [];
+  // perulangan untuk mendapatkan value dari array
   for (let i = 0; i < arr.length; i++) {
+    //error handling untuk menambahkan isi array
     try {
+        //mengubah value dalam index supaya memenuhi callback/keadaan yang di buat
     const itemTransformasi = callback(arr[i]);
     hasil = [...hasil, itemTransformasi];
 
-    } catch (error) {
+    }//menangkap error yang ada
+    catch (error) {
       console.error(`Error pada indeks ke-${i}:`, error);
     }
   }
