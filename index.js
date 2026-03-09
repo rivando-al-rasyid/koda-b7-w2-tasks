@@ -41,6 +41,91 @@ console.log("===========================================");
 })();
 console.log("===========================================");
 
+/**
+ * Task Naufal
+ */
+
+import naufal from "./tasks/naufal/index.js";
+
+console.log("===========================================");
+// Use IIFE here
+
+(function taskNaufal() {
+
+  // manual Map function
+   try {
+    const arr = [1,2,3,4,5];
+    const timesByTwo = naufal.manualMap(arr, (n) => n * 2);
+    console.log(timesByTwo);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // Failed
+  try {
+    const arr = 5;
+    const timesByTwo = naufal.manualMap(arr, (n) => n * 2);
+    console.log(timesByTwo);
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  // manual Filter function
+   try {
+    const arr = [1,2,3,4,5,6];
+    const evenNumbers = naufal.manualFilter(arr, (n) => n % 2 === 0);
+    console.log(evenNumbers);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // Failed
+  try {
+    const arr = 5;
+    const evenNumbers = naufal.manualFilter(arr, (n) => n * 2);
+    console.log(evenNumbers);
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  // cetakTabel
+  // Success
+  try {
+    const cetakTabel = naufal.cetakTabel(3);
+    console.log(cetakTabel);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // Failed
+  try {
+    const cetakTabel = naufal.cetakTabel("abc");
+    console.log(cetakTabel);
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  // countArray
+  // Success
+  try {
+    const arr = [1,2,3,4,5];
+    const countArray = naufal.countArray(arr);
+    console.log(countArray);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // Failed
+  try {
+    const countArray = naufal.countArray(['abc', 'a']);
+    console.log(countArray);
+  } catch (error) {
+    console.log(error.message);
+  }
+  
+})();
+console.log("===========================================");
+
+/**
+ * Task Ali
+ */
+
 (function taskAli() {
   const data = [
   { id: 1, name: "Ali Mustadji", hobbies: ["running", "gaming", "swimming", "programming", "soccer", "basketball",]},
@@ -79,5 +164,7 @@ console.log("===========================================");
     console.log(error.message);
   }
 })();
+
+console.log("===========================================");
 
 
