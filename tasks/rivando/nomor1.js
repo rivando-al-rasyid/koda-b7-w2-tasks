@@ -21,7 +21,7 @@ function custArr(arr, callback) {
     }
 
   } catch (error) {
-      console.error(`Error pada indeks ke-${i}:`, err.message);
+      console.error(`Error pada indeks ke-${i}:`, error);
   }
 
   }
@@ -42,7 +42,7 @@ function custMap(arr, callback) {
     hasil = [...hasil, itemTransformasi];
 
     } catch (error) {
-      console.error(`Error pada indeks ke-${i}:`, err.message);
+      console.error(`Error pada indeks ke-${i}:`, error);
     }
   }
   return hasil;
