@@ -1,0 +1,34 @@
+a. Uncaugth ReferenceError: user is not defined
+    adalah error dimana variable user belum terdefinisikan tetapi sudah dijalankan, maka dari itu fungsi tidak bisa berjalan dan akhirnya terdapat error.
+    terjadi pada fungsi:
+        getUserData, pada line 15 column 10
+        processUser, pada line 30 column 5
+        main, pada line 50 column 2
+
+b. TypeError: Cannot read properties of null(reading 'length')
+    adalah error yang terjadi karena mencoba mengambil panjang dari suatu variable yang bernilai null.
+    terjadi pada 3 file:
+    data.js, pada fungsi
+        processData pada line 8 column 15
+    server.js, pada fungsi
+        handleRequest pada line 20 column 5
+    app.js, pada fungsi
+        main pada line 35 column 2
+
+c. SyntaxError: Unexpected token ')'
+    adalah error yang terjadi karena terdapat kesalahan dalam penulisan tag atau penulisan opening sebuah parameter, intinya aturan penulisan yang menggunakan () tapi malah tidak ditulis. terjadi di file Script.js line 5
+
+d. TypeError: Cannot set properties of undefined (setting 'status')
+    adalah error yang terjadi saat penetapan nilai ke properti bernama status, namun pada objek yang bertipe undifined, atau belum ada.
+    terjadi pada file :
+    order.js di dalam dua fungsi:
+        updateOrder line 18 column 12
+        processOrder line 35 column 5
+    cart.js di dalam fungsi
+        checkout line 50 column 2
+
+e. RangeError: Maximum call stack size exceeded
+    adalah error yang terjadi karena program dijalankan dan callstack penuh, biasanya disebabkan oleh infinity loop, atau recursive function yang tidak berhenti
+    terjadi pada file:
+    app.js pada fungsi
+        recursiveFunction line 10 column 3
