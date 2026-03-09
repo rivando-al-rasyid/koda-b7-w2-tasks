@@ -112,7 +112,7 @@ console.log("===========================================");
   }
   // Failed
   try {
-    const countArray = naufal.countArray(['abc', 'a']);
+    const countArray = naufal.countArray(["abc", "a"]);
     console.log(countArray);
   } catch (error) {
     console.log(error.message);
