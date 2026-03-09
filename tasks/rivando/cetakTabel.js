@@ -9,7 +9,7 @@ export function cetakTabel (num){
   if (typeof num === "number" && num > 0 ){
     return cardinaNumber.map(number => `${num} x ${number} = ${number * num}`).join("\n");
   }else{
-    return "Paraneter Harus tipe angka dan bernilai positif"
+    return "Parameter Harus tipe angka dan bernilai positif"
   }
 }
 
