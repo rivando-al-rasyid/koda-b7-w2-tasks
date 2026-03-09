@@ -1,17 +1,17 @@
 export function manualMap(arr, cb){
     if(!Array.isArray(arr)){
-        return "Input harus berupa array"
+        return "Input harus berupa array";
     }
     if(typeof cb !== "function"){
         throw new Error("Input kedua harus bertipekan sebuah function");
     }
-    let hasil = []
+    const hasil = [];
 
     for(let i = 0; i < arr.length; i++){
-        hasil[i] = cb(arr[i])
+        hasil[i] = cb(arr[i]);
     }
 
-    return hasil
+    return hasil;
 }
 
 /*
@@ -25,22 +25,22 @@ export function manualMap(arr, cb){
 
 export function manualFilter(arr, cb){
     if(!Array.isArray(arr)){
-        return "Input harus berupa array"
+        return "Input harus berupa array";
     }
     if(typeof cb !== "function"){
         throw new Error("Input kedua harus bertipekan sebuah function");
     }
-    let hasil = []
-    let j = 0
+    const hasil = [];
+    let j = 0;
 
     for(let i = 0; i < arr.length; i++){
         if(cb(arr[i])){
-            hasil[j] = arr[i]
-            j++
+            hasil[j] = arr[i];
+            j++;
         }
     }
 
-    return hasil
+    return hasil;
 }
 
 
