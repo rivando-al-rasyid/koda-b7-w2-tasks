@@ -382,6 +382,94 @@ console.log("===========================================");
 console.log("===========================================");
 
 /**
+ * Task Aqil
+ */
+
+import aqil from "./tasks/aqil/index.js";
+
+console.log("===========================================");
+// Use IIFE here
+
+(function taskAqil() {
+
+  // manual Map function
+  try {
+    const angka = [5, 10, 15];
+    const hasilMap = aqil.manualMap(angka, function (item) {
+        return item + 1;
+    });
+    console.log("Hasil Map:", hasilMap);
+  } catch (error) {
+    console.log("Error pada manualMap:", error.message);
+  }
+  // Failed
+  try {
+    const data = 2;
+    const hasil = aqil.manualMap(data, function (item) {
+        return item + 1;
+    });
+    console.log("Hasil Map:", hasil);
+} catch (error) {
+    console.log("ManualMap Failed:", error.message);
+}
+  // manual Filter function
+  // success
+  try {
+    const angka = [5, 10, 15, 20];
+    const hasilFilter = aqil.manualFilter(angka, function (item) {
+        return item > 10;
+    });
+    console.log("Hasil Filter:", hasilFilter);
+  } catch (error) {
+    console.log("Error pada manualFilter:", error.message);
+  }
+  // Failed
+  try {
+  const angka = 3;
+  const hasilFilter = aqil.manualFilter(angka, function (item) {
+    return item > 10;
+  });
+  console.log("Hasil Filter:", hasilFilter);
+  } catch (error) {
+  console.log("ManualFilter Failed:", error.message);
+  }
+
+  // cetakTabel
+  // Success
+  try {
+  const angka = 5;
+  aqil.cetakTabel(angka);
+  } catch (error) {
+  console.log("Multiplication Table Failed:", error.message);
+  }
+  // Failed
+  try {
+    const cetakTabel = aqil.cetakTabel("abc");
+    console.log(cetakTabel);
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  // countArray
+  // Success
+  try {
+    const arr = [1,2,3,4,5];
+    const countArray = aqil.countArray(arr);
+    console.log(countArray);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // Failed
+  try {
+    const countArray = aqil.countArray(["abc", "a"]);
+    console.log(countArray);
+  } catch (error) {
+    console.log(error.message);
+  }
+  
+})();
+console.log("===========================================");
+/**
  * Task Vando
  */
 
@@ -463,4 +551,3 @@ try {
   }
 })();
 console.log("===========================================");
-

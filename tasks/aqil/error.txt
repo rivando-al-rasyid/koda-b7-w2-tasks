@@ -1,0 +1,40 @@
+1. # uncaught referenceerror: user is not defined apa itu
+- Menggunakan variabel "user" tapi belum dideklarasikan sebelumnya atau diluar scope saat kode dieksekusi
+## at getUserData (app.js:15:10)
+- error terjadi pada file = app.js, pada fungsi getUserData(), dan pada baris ke-15 karakter ke-10
+## at processUser (app.js:30:5)
+- error terjadi pada file = app.js, pada fungsi processUser(), dan pada baris ke-30 karakter ke-5
+## at main (app.js:50:2)
+- error terjadi pada file = app.js, pada fungsi main(), dan pada baris ke-50 karakter ke-2
+
+2. # typeError: cannot read properties of null (reading 'length')
+- mencoba membaca properti '.length' dari sebuah variabel yang bernilai null, karena null tidak memiliki
+properti, maka javascript tidak bisa mengeksekusi operasi sehingga muncul typerError
+## at processData (data.js:8:15)
+- error terjadi pada file = data.js, pada fungsi processData(), pada baris ke-8 karakter/kolom ke-15
+## at handleRequest (server.js:10:5)
+- error terjadi pada file = server.js, pada fungsi handleRequest(), pada baris ke-10 karakter/kolom ke-5
+## at main (app.js:35:2)
+- error terjadi pada file = app.js, pada fungsi main(), pada baris ke-35 karakter/kolom ke-2
+
+3. # SyntaxError: unexpected ')'
+- terdapat tanda kurung ')' yang tidak seharusnya ada atau jumlah kurung pasangannya '(' tidak seimbang dalam kode
+## at script.js:5
+- error terjadi pada file = script.js, pada baris ke-5
+
+4. # typeError" cannot set properties of undefined (setting 'status')
+- erorr terjadi karena mencoba mengubah atau memberikan nilai pada properti status, tetapi objek yang ingin diubah bernilai undefined (belum didefinisikan)
+karena undefined bukan objek
+## at updateOrder (order.js:18:12)
+- error terjadi pada file = order.js, pada fungsi updateOrder(), pada baris ke-18 dan karakter/kolom ke-12
+## at processOrder (order.js:35:5)
+- error terjadi pada file = order.js, pada fungsi updateOrder(), pada baris ke-18 dan karakter/kolom ke-12
+## at checkout (cart.js:50:2)
+- error terjadi pada file = cart.js, pada fungsi checkout(), pada baris ke-50 dan karakter/kolom ke-2
+
+5. # rangeError: maximum call stack size exceeded
+- error itu mengalami infinite recursion atau perulangan fungsi yang tidak berhenti dan secara terus-menerus, yang mengakibatkan call stack penuh dan program dipaksa berhenti
+## at recrusiveFunction (app.js:10:3)
+## at recrusiveFunction (app.js:10:3)
+## at recrusiveFunction (app.js:10:3)
+--- error terjadi pada file = app.js, pada fungsi recrusiveFunction(), pada baris ke-10
