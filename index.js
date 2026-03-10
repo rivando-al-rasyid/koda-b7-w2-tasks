@@ -702,6 +702,66 @@ console.log("===========================================");
 })();
 console.log("===========================================");
 
+  import akmal from "./tasks/akmal/index.js";
+  console.log("===========================================");
+
+  (function akmalTask() {
+  try {
+    const angka = [1,2,3,4,5];
+    const diKaliDua = akmal.mapManual(angka, (num) => num *2);
+    console.log(diKaliDua);
+  } catch (error) {
+    console.log(error.message);
+  }
+  try {
+    const angka = ["sama"];
+    const diKaliDua = akmal.mapManual(angka, (num) => num *2);
+    console.log(diKaliDua);
+  } catch (error) {
+    console.log(error.message);
+  }
+  try {
+    const angka = [1,2,3,4,5,6,7,8,9,10];
+    const angkaGanjil = akmal.filterManual(angka, (num) => num %2 !== 0 );
+    console.log(angkaGanjil);
+  } catch (error) {
+    console.log(error.message);
+  }  
+  try {
+    const angka = [1,2,3,4,"asds","asdd"];
+    const angkaGanjil = akmal.filterManual(angka, (num) => num %2 !== 0 );
+    console.log(angkaGanjil);
+  } catch (error) {
+    console.log(error.message);
+  }
+  try {
+    const countArray = akmal.countArray([1,2,3,4,5]);
+    console.log(countArray);
+  } catch (error) {
+    console.log(error.message);
+  }
+    try {
+    const countArray = akmal.countArray("sda");
+    console.log(countArray);
+  } catch (error) {
+    console.log(error.message);
+  }
+  try {
+    const perkalian = akmal.cetakTabel(5);
+    console.log(perkalian);
+  } catch (error) {
+    console.log(error.message);
+  }
+    try {
+    const perkalian = akmal.cetakTabel("asdj");
+    console.log(perkalian);
+  } catch (error) {
+    console.log(error.message);
+  }
+  
+})();
+console.log("===========================================");
+
 /**
  * Task Vando
  */
@@ -786,4 +846,5 @@ try {
 })();
 
 console.log("===========================================");
+
 

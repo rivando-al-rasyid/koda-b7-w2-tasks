@@ -1,0 +1,29 @@
+pada soal nomor 4 a. :
+sebuah kesalahan karena user tidak ditemukan atau belum dideklarasikan sebelumnya atau diluar scope saat kode dieksekusi
+error terjadi pada function getUserData di file app.js baris 15 kolom (char) 10
+error terjadi pada function processUser di file app.js baris 30 kolom 5
+error terjadi pada function main di file app.js baris 50 kolom 2
+
+pada soal nomor 4 b. :
+error karena tipe data tidak sesuai 
+program mencoba mengakses properti .length dari nilai null, Karena null tidak memiliki properti, maka javascript menghasilkan error
+error terjadi pada function processData di file data.js baris 8 kolom 15
+error terjadi pada function handleRequest di file server.js baris 20 kolom 5
+error terjadi pada function main di file app.js baris 35 kolom 2
+
+pada soal nomor 4 c. :
+Penuslisan syntax javascript yang salah, seharusnya tanda ')' tidak diperlukan yang akhirnya membuat error
+error terjadi pada file script.js pada baris 5
+
+pada soal nomor 4 d. :
+program mencoba mengubah properti status pada variabel yang bernilai undefined 
+( belum didefinisikan) karena undefined bukan objek
+error terjadi pada function updateOrder di file order.js baris 18 kolom 12
+error terjadi pada function processOrder di file order.js baris 35 kolom 5
+error terjadi pada function checkout di file cart.js baris 50 kolom 2
+
+pada soal nomor 5 e. :
+error karna melampau batas. fungsi dipanggil terus menerus sampai stack penuh
+error terjadi pada function recursiveFunction di file app.js baris 10 kolom 3
+error terjadi berulang kali karna fungsi memanggil dirinya sendiri terus menerus
+
